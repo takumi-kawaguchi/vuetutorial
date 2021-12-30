@@ -8,15 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app-7">
-        <ol>
-            <todo-item
-                v-for="item in groceryList"
-                v-bind:todo="item"
-                v-bind:key="item.id"
-            >
-            </todo-item>
-        </ol>
+    <div id="app">
+        <p>v-bind: {{ data1 }}</p>
+        <input type="text" v-bind:value="data1">
+        <br>
+        <p>v-model: {{ data2 }}</p>
+        <input type="text" v-model="data2">
     </div>
     <script src="script.js"></script>
 </body>
