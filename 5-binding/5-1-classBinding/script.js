@@ -7,5 +7,13 @@ var app = new Vue({
             test: true,
             error: true
         }
+    },
+    computed: {
+        getClassObject: function () {
+            return {
+                active: this.isActive,
+                'text-danger': this.hasError
+            }
+        }
     }
 })
