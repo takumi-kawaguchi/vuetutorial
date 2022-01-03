@@ -23,6 +23,10 @@
             class="static"
             v-bind:class="getClassObject"
         >test binding class computed property</div>
+        <div
+            class="static"
+            v-bind:class="[activeClass, errorClass]"
+        >test binding class array</div>
     </div>
     <script src="script.js"></script>
 </body>

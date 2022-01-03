@@ -6,7 +6,9 @@ var app = new Vue({
         classObject: {
             test: true,
             error: true
-        }
+        },
+        activeClass: 'active',
+        errorClass: 'text-danger'
     },
     computed: {
         getClassObject: function () {
