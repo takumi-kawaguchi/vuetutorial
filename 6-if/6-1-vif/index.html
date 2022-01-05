@@ -13,6 +13,22 @@
     <div id="app">
         <p v-if='awesome'>vue is awesome</p>
         <p v-else>oh no...</p>
+        <p v-if='type === "A"'>A</p>
+        <p v-else-if='type === "B"'>B</p>
+        <p v-else-if='type === "C"'>C</p>
+        <p v-else>not a/b/c</p>
+        <hr>
+        <template v-if='loginType === "username"'>
+            <label>User Name</label>
+            <input placeholder="enter your username" key='username-input'>
+        </template>
+        <template v-else>
+            <label>Email</label>
+            <input placeholder="enter your email" key='email-input'>
+        </template>
+        <button v-on:click='toggleLoginType()'>toggle login type</button>
+        <hr>
+        <h1 v-show='ok'>hello!</h1>
     </div>
     <script src="script.js"></script>
 </body>
