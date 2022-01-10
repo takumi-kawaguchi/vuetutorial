@@ -23,6 +23,12 @@
         <ul>
             <li v-for="(value, name, index) in object">{{ index }} - {{ name }} - {{ name }}</li>
         </ul>
+        <ul>
+            <li v-for="value in evenNumbers">{{ value }}</li>
+        </ul>
+        <div>
+            <span v-for="n in 10">{{ n }}</span>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
