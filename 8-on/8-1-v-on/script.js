@@ -16,6 +16,9 @@ var app = new Vue({
         },
         doOnlyThis: function () {
             alert('doOnlyThis!')
+        },
+        doThis: function () {
+            alert('doThis!')
         }
     }
 })
