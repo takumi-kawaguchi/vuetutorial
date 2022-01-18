@@ -54,6 +54,17 @@
             <option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
         </select>
         <span>selected: {{ selected }}</span>
+        <br>
+        <input type="checkbox" v-model="toggle" true-value="yes" false-value="no">
+        <br>
+        <p>default</p>
+        <input v-model="msg">
+        <p>lazy</p>
+        <input v-model.lazy="msg">
+        <p>number</p>
+        <p>{{ age }}</p>
+        <input id="withoutnumber" type="number" v-model="age">
+        <input id="withnumber" type="number" v-model.number="age">
     </div>
     <script src="script.js"></script>
 </body>

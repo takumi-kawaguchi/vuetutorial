@@ -11,6 +11,9 @@ var app = new Vue({
             { text: 'One', value: 'A' },
             { text: 'Two', value: 'B' },
             { text: 'Three', value: 'C' }
-        ]
+        ],
+        toggle: '',
+        msg: '',
+        age: 0
     }
 })
