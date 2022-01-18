@@ -16,6 +16,44 @@
         <br>
         <p style="white-space: pre-line">{{ message }}</p>
         <textarea v-model="message"></textarea>
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+        <br>
+        <input type="checkbox" value="Jack" id="jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" value="John" id="john" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" value="Mike" id="mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>checked names: {{ checkedNames }}</span>
+        <br>
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span>
+        <br>
+        <select v-model="selected">
+            <option value="" disabled>select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>D</option>
+        </select>
+        <span>selected: {{ selected }}</span>
+        <br>
+        <select v-model="multipleSelected" multiple>
+            <option>D</option>
+            <option>E</option>
+            <option>F</option>
+        </select>
+        <span>selected: {{ multipleSelected }}</span>
+        <br>
+        <select v-model="selected">
+            <option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
+        </select>
+        <span>selected: {{ selected }}</span>
     </div>
     <script src="script.js"></script>
 </body>
