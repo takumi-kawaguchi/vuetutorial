@@ -16,6 +16,21 @@
             v-bind:key="post.id"
             v-bind:title="post.title"
         ></blog-post>
+        <hr>
+        <refactor-blog-post
+            v-for="post in posts"
+            v-bind:key="post.id"
+            v-bind:post="post"
+        ></refactor-blog-post>
+        <hr>
+        <div :style="{ fontSize: postFontSize + 'em' }">
+            <childcomponent-blog-post
+                v-for="post in posts"
+                v-bind:key="post.id2"
+                v-bind:post="post"
+                v-on:enlarge-text="onEnlargeText"
+            ></childcomponent-blog-post>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
